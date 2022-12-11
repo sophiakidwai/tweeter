@@ -16,10 +16,27 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #ecf4ef;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+ * Additional CSS can be defined below or in other CSS files, as per instructions #ecf4ef
  */
+
+ nav {
+  font-family: 'Bungee', sans-serif;
+ }
+
+ main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}

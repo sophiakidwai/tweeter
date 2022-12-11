@@ -1,0 +1,38 @@
+/* The visible portion of the header should have a height of 400px and be 100% the width of its parent container
+The avatar should be centered vertically and horizontally
+The name should be centered below the avatar
+The background-color should be a different colour than the nav and the body */
+
+.topHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+  margin-top: 115px;
+  background-color: #85a1e6;
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+#first-name {
+  font-weight: 700;
+}
+
+#last-name {
+  font-weight: 300;
+}
