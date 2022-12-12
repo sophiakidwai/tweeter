@@ -29,13 +29,16 @@ button {
   background-color: #4056a1;
   color: #ffffff;
   margin-top: 15px;
+  flex-direction: row;
 
 }
 
 .counter {
   display: flex;
   font-family: "Bungee";
-  float: right;
+  flex-direction: row-reverse;
+  align-items: right;
+
 }
 
 .tweetContainer {

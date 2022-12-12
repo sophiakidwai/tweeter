@@ -1,0 +1,41 @@
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #5f5c53;
+  padding: 0.7em;
+  margin: 10px 0px;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px;
+  border-bottom: 5px solid #545149;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+}
+
+header>.username {
+  color: #b4b4b4;
+}
+
+footer > span {
+  font-size: 17px;
+}
+
+footer > div {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 17px;
+}
+
