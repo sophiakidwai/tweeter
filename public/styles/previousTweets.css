@@ -34,10 +34,6 @@ header>.username {
   color: #b4b4b4;
 }
 
-footer>span {
-  font-size: 17px;
-}
-
 footer>div {
   display: flex;
   justify-content: flex-end;
