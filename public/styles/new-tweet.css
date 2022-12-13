@@ -45,3 +45,9 @@ button {
   /* background-color: red; */
   margin-top: 2rem;
 }
+
+.error-style {
+  color: #D8000C;
+  background-color: #FFBABA;
+  
+}
