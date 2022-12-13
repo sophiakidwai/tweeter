@@ -1,4 +1,4 @@
-.tweet-container {
+.tweet {
   display: flex;
   flex-direction: column;
   border: 4px solid #5f5c53;
@@ -6,16 +6,9 @@
   margin: 10px 0px;
 }
 
-.tweet-container:hover {
+.tweet:hover {
   box-shadow: 10px 10px;
   color: #b4b4b4;
-}
-
-hr {
-  margin-left: auto;
-  margin-right: auto;
-  border: 0px;
-  border-bottom: 5px solid #545149;
 }
 
 header {

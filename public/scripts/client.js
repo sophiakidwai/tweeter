@@ -49,7 +49,7 @@ $(document).ready(function () {
     for (let tweet of tweets) {
 
       const $tweet = createTweetElement(tweet);
-      $("#tweet-container").prepend($tweet);
+      $(".tweet-container").prepend($tweet);
     }
   };
 

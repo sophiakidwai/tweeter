@@ -8,6 +8,8 @@
 
 #tweet-text {
   display: block;
+  padding-top: 30px;
+  align-items: stretch;
   width: 100%;
   background-color: #ecf4ef;
   border: none;

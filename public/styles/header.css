@@ -5,12 +5,11 @@ The background-color should be a different colour than the nav and the body */
 
 .topHeader {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
   width: 100%;
-  margin-top: 115px;
+  height: 520px;
+  padding-top: 120px;
+  flex-direction: column;
+  align-content: flex-end;
   background-color: #85a1e6;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
   
@@ -24,15 +23,20 @@ The background-color should be a different colour than the nav and the body */
 
 .avatar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 3rem;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 #first-name {
+  display: flex;
+  justify-content: center;
+  
   font-weight: 700;
 }
 
 #last-name {
+  display: flex;
+  justify-content: center;
+  
   font-weight: 300;
 }
