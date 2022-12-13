@@ -16,3 +16,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+!["Screenshot of Tweets](https://github.com/sophiakidwai/tweeter/blob/master/docs/Screenshot%202022-12-13%20at%201.30.40%20PM.png?raw=true)
+!["Screenshot of error message"](https://github.com/sophiakidwai/tweeter/blob/master/docs/Screenshot%202022-12-13%20at%201.31.12%20PM.png?raw=true)
