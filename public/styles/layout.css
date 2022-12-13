@@ -22,7 +22,8 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
   margin: 0;
 }
 
@@ -42,3 +43,21 @@ body {
   width: 90%;
   margin: auto;
 }
+
+
+@media (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .new-tweet {
+    width: 33%;
+    margin: 220px 0px 0px 3rem;
+  }
+  .tweet-container {
+    width:90%;
+    float: right;
+    margin: 40px 3rem 0px 0px;
+  }
+}
+

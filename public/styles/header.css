@@ -12,31 +12,30 @@ The background-color should be a different colour than the nav and the body */
   align-content: flex-end;
   background-color: #85a1e6;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
-  
+  margin: 0 auto; 
 }
 
-.name {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 3rem;
-}
-
-.avatar {
+div.name {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding-bottom: 3rem;
 }
 
 #first-name {
   display: flex;
   justify-content: center;
-  
   font-weight: 700;
 }
 
 #last-name {
   display: flex;
   justify-content: center;
-  
   font-weight: 300;
+}
+
+div.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
