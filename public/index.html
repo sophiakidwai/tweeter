@@ -32,6 +32,9 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+  <!-- Time Ago -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -51,8 +54,8 @@
     </div>
     <br>
     <div class="name">
-      <h2><span id="first-name">Amy</span>
-        <span id="last-name">Mansell</span>
+      <h2><span id="first-name">Test</span>
+        <span id="last-name">Test</span>
       </h2>
     </div>
   </header>
@@ -62,17 +65,19 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form class="submitTweet" action="/tweets" method="POST">
+      <form id="tweet-form" action="/tweets" method="POST">
         <textarea  name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="submitTweet">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+      <div class ="over-limit">
+      </div>
     </section>
 
     <!-- Tweet container -->
-    <section class="tweet-container">
+    <section id="tweet-container">
 
     </section>
 

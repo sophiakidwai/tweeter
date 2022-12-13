@@ -5,33 +5,10 @@
  */
 
 
-const data = [
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    created_at: 1461113959088,
-  },
-];
+$(document).ready(function () {
 
-const createTweetElement = function (tweet) {
-  const $tweet = $(`
+  const createTweetElement = function (tweet) {
+    const $tweet = $(`
   <article class="tweet">
   <header class="tweet-header">
     <div class="profile-pic">
@@ -42,7 +19,7 @@ const createTweetElement = function (tweet) {
       <p>${tweet.user.handle}</p>
     </div>
     <div class="handle">
-      <p>${tweet.created_at}</p>
+    <p>${timeago.format(tweet.created_at)}</p>
     </div>
   </header>
   <div class="tweet-content">
@@ -58,16 +35,48 @@ const createTweetElement = function (tweet) {
   </footer>
   </article>
   `);
-  return $tweet;
-};
+    return $tweet;
+  };
 
-const renderTweets = function (tweets) {
-  for (let tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $(".tweet-container").prepend($tweet);
-  }
-};
+  const renderTweets = function (tweets) {
+    console.log(tweets)
+    for (let tweet of tweets) {
+      
+      const $tweet = createTweetElement(tweet);
+      $("#tweet-container").prepend($tweet);
+    }
+  };
 
-$(document).ready(function () {
-  renderTweets(data);
+  
+
+  $("#tweet-form").submit(function (event) {
+    event.preventDefault();
+    const tweet = $(this).serialize();
+
+    const textArea = $("#tweet-text").val();
+    if (textArea.length > 140) {
+      return $(".over-limit").text("Too many characters");
+    }
+
+    if (textArea === "") {
+      return $(".over-limit").text("Please enter a tweet");
+    }
+
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: tweet,
+    }).then(loadTweets)
+
+  });
+
+  const loadTweets = function () {
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+    }).then(renderTweets)
+        
+  
+  };
+  loadTweets();
 });
