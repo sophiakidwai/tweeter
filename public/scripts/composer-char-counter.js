@@ -1,8 +1,6 @@
-$(document).ready(function () {
-  console.log('The document is ready!');
+$(document).ready(function() {
 
-
-  $("textarea").on("input", function () {
+  $("textarea").on("input", function() {
     let counter = 140 - $(this).val().length;
     $(".counter").text(counter);
     if (counter < 0) {

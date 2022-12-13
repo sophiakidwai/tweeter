@@ -5,15 +5,15 @@
  */
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  const createTweetElement = function (tweet) {
+  const createTweetElement = function(tweet) {
     const $tweet = $(`
   <article class="tweet">
   <header class="tweet-header">
@@ -44,8 +44,7 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  const renderTweets = function (tweets) {
-    console.log(tweets)
+  const renderTweets = function(tweets) {
     for (let tweet of tweets) {
 
       const $tweet = createTweetElement(tweet);
@@ -55,7 +54,7 @@ $(document).ready(function () {
 
 
 
-  $("#tweet-form").submit(function (event) {
+  $("#tweet-form").submit(function(event) {
     event.preventDefault();
     const tweet = $(this).serialize();
 
@@ -81,11 +80,11 @@ $(document).ready(function () {
     });
   });
 
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax({
       url: "/tweets",
       method: "GET",
-    }).then(renderTweets)
+    }).then(renderTweets);
 
 
   };
