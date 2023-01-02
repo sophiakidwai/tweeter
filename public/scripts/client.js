@@ -41,14 +41,15 @@ $(document).ready(function() {
   </footer>
   </article>
   `);
-    return $tweet;
+  $(".tweet-container").prepend($tweet);
   };
 
-  const renderTweets = function(tweets) {
-    for (let tweet of tweets) {
+ 
 
-      const $tweet = createTweetElement(tweet);
-      $(".tweet-container").prepend($tweet);
+  const renderTweets = function(tweets) {
+    $('.tweet-container').empty();
+    for (let tweet of tweets) {
+    createTweetElement(tweet);
     }
   };
 
@@ -67,6 +68,8 @@ $(document).ready(function() {
       return $(".error-message").text("Please enter a tweet").slideDown().addClass("error-style");
 
     }
+
+//tweet submission data
 
     $.ajax({
       url: "/tweets",
